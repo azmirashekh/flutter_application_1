@@ -1,35 +1,29 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const LabClass05());
+  runApp(App());
 }
-// Based on Layout
-/*
-1. Shadow
-2. Depth
-3. Motion
-.
-assets\images\photo01.png
-*/
 
-class LabClass05 extends StatelessWidget {
-  const LabClass05({super.key});
-
+class App extends StatelessWidget {
+  const App({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Basic UI - Flutter 02",
+      title: "Flutter Basic UI - 02",
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Basic UI - Flutter 02"),
-          backgroundColor: Colors.blue[400],
-          centerTitle: true,
-          elevation: 3.5,
-          foregroundColor: Colors.blue,
-          shadowColor: const Color.fromARGB(167, 128, 128, 128),
+          title: Text("Flutter Basic UI - 02"),
+          backgroundColor: Colors.blue,
+          titleTextStyle: TextStyle(
+            color: Colors.white,
+            fontSize: 20,
+          ),
         ),
-        body: Row(
+        body: Container( 
+          height: double.infinity,
+          child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Icon(
               Icons.star,
